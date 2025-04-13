@@ -28,6 +28,7 @@
   --color-dark: #1f2937;
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-extra: #e0e5f5;
 
   /* Border Radius */
   --radius-sm: 0.125rem;
@@ -392,6 +393,7 @@
 .text-light { color: var(--color-light); }
 .text-white { color: var(--color-white); }
 .text-black { color: var(--color-black); }
+.text-extra { color: var(--color-extra); }
 .hover\:text-primary:hover { color: var(--color-primary); }
 .hover\:text-secondary:hover { color: var(--color-secondary); }
 .hover\:text-success:hover { color: var(--color-success); }
@@ -404,7 +406,7 @@
 .hover\:text-light:hover { color: var(--color-light); }
 .hover\:text-white:hover { color: var(--color-white); }
 .hover\:text-black:hover { color: var(--color-black); }
-
+.hover\:text-extra:hover { color: var(--color-extra); }
 
 .text-center{ text-align: center; }
 /* =======================================
@@ -420,7 +422,10 @@
 .bg-light { background-color: var(--color-light); }
 .bg-dark { background-color: var(--color-dark); }
 .bg-white { background-color: var(--color-white); }
-.bg-black { background-color: var(--color-black);.hover\:bg-primary:hover { background-color: var(--color-primary); }
+.bg-black { background-color: var(--color-black); }
+.bg-muted { background-color: var(--color-muted); }
+.bg-extra { background-color: var(--color-extra); }
+.hover\:bg-extra:hover { background-color: var(--color-extra); }
 .hover\:bg-secondary:hover { background-color: var(--color-secondary); }
 .hover\:bg-success:hover { background-color: var(--color-success); }
 .hover\:bg-danger:hover { background-color: var(--color-danger); }
@@ -431,7 +436,8 @@
 .hover\:bg-dark:hover { background-color: var(--color-dark); }
 .hover\:bg-light:hover { background-color: var(--color-light); }
 .hover\:bg-white:hover { background-color: var(--color-white); }
-.hover\:bg-black:hover { background-color: var(--color-black); } }
+.hover\:bg-black:hover { background-color: var(--color-black); }
+.hover\:bg-extra:hover { background-color: var(--color-extra); }
 
 /* =======================================
    🟦 BORDER & RADIUS
@@ -788,4 +794,130 @@
   margin-right: auto;
 }
 
+/* =======================================
+   🌫️ SHADOWS
+======================================= */
+.shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); }
+.shadow { box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.06); }
+.shadow-md { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
+.shadow-xl { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); }
+.shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+.shadow-inner { box-shadow: inset 0 2px 4px 0 rgba(0,0,0,0.06); }
+.shadow-none { box-shadow: none; }
 
+/* =======================================
+   🌫️ OPACITY
+======================================= */
+.opacity-0 { opacity: 0; }
+.opacity-25 { opacity: 0.25; }
+.opacity-50 { opacity: 0.5; }
+.opacity-75 { opacity: 0.75; }
+.opacity-100 { opacity: 1; }
+
+/* =======================================
+   🌠 TRANSFORM UTILITIES
+======================================= */
+.transform { transform: translateZ(0); }
+.scale-50 { transform: scale(0.5); }
+.scale-75 { transform: scale(0.75); }
+.scale-90 { transform: scale(0.9); }
+.scale-95 { transform: scale(0.95); }
+.scale-100 { transform: scale(1); }
+.scale-105 { transform: scale(1.05); }
+.scale-110 { transform: scale(1.1); }
+.rotate-0 { transform: rotate(0deg); }
+.rotate-45 { transform: rotate(45deg); }
+.rotate-90 { transform: rotate(90deg); }
+.rotate-180 { transform: rotate(180deg); }
+.-rotate-45 { transform: rotate(-45deg); }
+
+.translate-x-0 { transform: translateX(0); }
+.translate-x-1 { transform: translateX(0.25rem); }
+.translate-x-2 { transform: translateX(0.5rem); }
+.translate-y-0 { transform: translateY(0); }
+.translate-y-1 { transform: translateY(0.25rem); }
+.translate-y-2 { transform: translateY(0.5rem); }
+
+/* =======================================
+   ⏱ TRANSITION DURATIONS
+======================================= */
+.duration-75 { transition-duration: 75ms; }
+.duration-100 { transition-duration: 100ms; }
+.duration-150 { transition-duration: 150ms; }
+.duration-200 { transition-duration: 200ms; }
+.duration-300 { transition-duration: 300ms; }
+.duration-500 { transition-duration: 500ms; }
+.duration-700 { transition-duration: 700ms; }
+.duration-1000 { transition-duration: 1000ms; }
+
+/* =======================================
+   🔁 EASING FUNCTIONS
+======================================= */
+.ease-linear { transition-timing-function: linear; }
+.ease-in { transition-timing-function: ease-in; }
+.ease-out { transition-timing-function: ease-out; }
+.ease-in-out { transition-timing-function: ease-in-out; }
+
+/* =======================================
+   🖼 OBJECT FIT
+======================================= */
+.object-contain { object-fit: contain; }
+.object-cover { object-fit: cover; }
+.object-fill { object-fit: fill; }
+.object-none { object-fit: none; }
+.object-scale-down { object-fit: scale-down; }
+
+/* =======================================
+   🖱️ CURSORS
+======================================= */
+.cursor-pointer { cursor: pointer; }
+.cursor-default { cursor: default; }
+.cursor-wait { cursor: wait; }
+.cursor-text { cursor: text; }
+.cursor-move { cursor: move; }
+.cursor-not-allowed { cursor: not-allowed; }
+
+/* =======================================
+   🔒 POINTER EVENTS
+======================================= */
+.pointer-events-none { pointer-events: none; }
+.pointer-events-auto { pointer-events: auto; }
+
+/* =======================================
+   📑 USER SELECTION
+======================================= */
+.select-none { user-select: none; }
+.select-text { user-select: text; }
+.select-all { user-select: all; }
+
+/* =======================================
+   🔘 LIST STYLES
+======================================= */
+.list-none { list-style-type: none; }
+.list-disc { list-style-type: disc; }
+.list-decimal { list-style-type: decimal; }
+
+/* =======================================
+   🖊 TEXT DECORATION
+======================================= */
+.underline { text-decoration: underline; }
+.line-through { text-decoration: line-through; }
+.no-underline { text-decoration: none; }
+
+/* =======================================
+   ✂️ TEXT TRUNCATION
+======================================= */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =======================================
+   🧩 RESPONSIVE VISIBILITY (EXTRA)
+======================================= */
+@media (max-width: 640px) {
+  .xs\:hidden { display: none; }
+  .xs\:block { display: block; }
+}
