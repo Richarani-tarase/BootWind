@@ -20,9 +20,9 @@ const UtilitySection: React.FC<UtilitySectionProps> = ({
       className="mb-8 bg-gray-900 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-all duration-300"
     >
       <h3 className="text-xl font-semibold mb-4 text-primary">{title}</h3>
-      <div className="flex flex-col md:flex-row gap-6">
+      <div className="">
         {/* Description */}
-        <div className="md:w-1/2 text-gray-300 text-lg">
+        <div className="md:w-1/2 text-gray-300 mb-4 text-lg">
           {description}
         </div>
 

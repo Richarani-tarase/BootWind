@@ -1,28 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function Sidebar() {
-  const [collapsedSubsections, setCollapsedSubsections] = useState<{
-    [key: string]: boolean;
-  }>({
-    "Layout & Display": true,
-    Spacing: true,
-    Typography: true,
-    Colors: true,
-    Borders: true,
-    Shadows: true,
-    "Transitions & Transforms": true,
-    "Positioning & Z-Index": true,
-    "Text Effects": true,
-    Miscellaneous: true,
-  });
-
-  const toggleSubsectionCollapse = (title: string) => {
-    setCollapsedSubsections((prev) => ({
-      ...prev,
-      [title]: !prev[title],
-    }));
-  };
-
   const sections = [
     {
       title: "Getting Started",
@@ -135,57 +113,42 @@ export default function Sidebar() {
   ];
 
   return (
-    <aside className="h-100% fixed w-100 p-6 bg-black text-white border-r border-gray-700 overflow-y-auto">
+    <aside className="fixed top-0 left-0 h-100% w-100 p-6 bg-black text-white border-r border-gray-700 overflow-y-auto">
       <nav>
-        <div className="sticky top-0">
         {sections.map((section, index) => (
           <div key={index}>
-            <h2 className="text-2xl font-bold text-xl my-8 uppercase tracking-wider text-gray-300">
+            <h2 className="text-2xl font-bold my-8 uppercase tracking-wider text-gray-300">
               {section.title}
             </h2>
-            <ul className="space-y-1 flex flex-col gap-4 pl-2 list-none">
+            <ul className="flex flex-col gap-4 pl-2 list-none">
               {section.links.map((link, linkIndex) => (
-                <div key={linkIndex}>
-                  {!link.sublinks ? (
-                    <li>
-                      <a
-                        href={link.href}
-                        className="block p-1 rounded-md text-white text-lg hover:bg-white hover:text-black no-underline transition"
-                      >
-                        {link.name}
-                      </a>
-                    </li>
-                  ) : (
-                    <>
-                      <li
-                        className="block p-1 rounded-md text-white text-lg hover:bg-white hover:text-black no-underline transition cursor-pointer font-semibold"
-                        onClick={() => toggleSubsectionCollapse(link.name)}
-                      >
-                        {link.name}
-                      </li>
+                <li key={linkIndex}>
+                  <a
+                    href={link.href}
+                    className="block p-1 rounded-md text-white text-lg hover:bg-white hover:text-black no-underline transition"
+                  >
+                    {link.name}
+                  </a>
 
-                      {!collapsedSubsections[link.name] && (
-                        <ul className="space-y-1 pl-8 list-none">
-                          {link.sublinks.map((sublink, sublinkIndex) => (
-                            <li key={sublinkIndex}>
-                              <a
-                                href={sublink.href}
-                                className="block p-2 rounded-md text-white text-xs hover:bg-white hover:text-black no-underline transition"
-                              >
-                                {sublink.name}
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </>
+                  {"sublinks" in link && link.sublinks && (
+                    <ul className="space-y-1 pl-6 mt-4 list-none">
+                      {link.sublinks.map((sublink, sublinkIndex) => (
+                        <li key={sublinkIndex}>
+                          <a
+                            href={sublink.href}
+                            className="block p-2 rounded-md text-white text-sm hover:bg-white hover:text-black no-underline transition"
+                          >
+                            {sublink.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
                   )}
-                </div>
+                </li>
               ))}
             </ul>
           </div>
         ))}
-        </div>
       </nav>
     </aside>
   );
