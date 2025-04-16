@@ -2,9 +2,9 @@
 
 export default function Footer() {
   return (
-    <div className="bg-dark">
+    <div className="flex bg-dark">
         <div className="text-white flex justify-between">
- <div>
+          <div>
     
  <p className="p-6 text-lg">© 2025 BootWind. All Rights Reserved.</p>
  </div>

@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col h-screen">
         <Navbar />
         <div className="flex-1">
           <Routes>

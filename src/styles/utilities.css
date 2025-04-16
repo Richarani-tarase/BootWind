@@ -48,6 +48,7 @@
 .grid { display: grid; }
 .relative { position: relative; }
 .absolute { position: absolute; }
+.sticky {position:sticky}
 .w-full { width: 100%; }
 .top-full { top: 100%; }
 .top-50 { top: 50%; }
@@ -562,6 +563,10 @@
 
 .transition { transition: all 0.2s ease-in-out; }
 
+
+.overflow-hidden{overflow: hidden;}
+.overflow-y-auto{overflow-y: auto;}
+.overflow-x-auto{overflow-x: auto;}
 /* =======================================
    📱 RESPONSIVE CLASSES
 ======================================= */
