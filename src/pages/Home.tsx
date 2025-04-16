@@ -1,31 +1,29 @@
+import { Link } from "react-router-dom";
+import Demo from "../components/Demo";
+import Demo2 from "../components/Demo2";
 export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <div className="bg-black text-white  py-12 px-8 flex flex-wrap gap-16">
+      <div className="bg-black text-white py-6 md:py-12 px-4 md:px-8 md:flex flex-wrap gap-16">
         {/* Left Section */}
-        <div className="w-full md:w-2/5 ml-8 my-12">
-          <h1 className="text-5xl py-6 font-bold">
+        <div className="w-full md:w-2/5 md:ml-8 my-12">
+          <h1 className="md:text-5xl text-3xl py-6 font-bold">
             The Power of Bootstrap, The Flex of Tailwind.
           </h1>
-          <p className="text-lg text-muted">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, magnam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-            suscipit dicta minima, dolore dolores voluptate iusto omnis mollitia culpa,
-            quod qui, pariatur ut?
-          </p>
+          <p className="md:text-lg text-md text-muted">
+    Bootstrap provides ready-to-use UI components, while Tailwind offers low-level utility classes for custom designs. Combining both gives you rapid development with Bootstrap's components and the flexibility of Tailwind’s utility-first approach. Together, they enable easy creation of responsive and stylish web layouts.
+  </p>
           <div className="flex flex-wrap justify-start gap-6 mt-6">
-            <button className="text-xl py-4 px-6 rounded-md bg-primary text-white">
-              Get started
-            </button>
-            <button className="text-xl py-4 px-6 rounded-md border border-white text-black">
-              Documentation
-            </button>
+            <Link to="/documentation" className="text-xl no-underline py-4 px-6 rounded-md bg-primary text-white">
+              Getting started
+            </Link>
+          
           </div>
         </div>
 
         {/* Right Section */}
-        <div className="w-full md:w-2/5 ml-8 md:ml-16">
+        <div className="w-full md:w-2/5 py-4 md:py-0 md:ml-8 md:ml-16">
           <aside className="bg-dark text-white p-6 rounded-lg w-full max-w-lg font-mono my-12">
             <div className="flex justify-between items-center">
               <div className="flex gap-2">
@@ -60,7 +58,7 @@ export default function Home() {
         { title: "💥 Developer First", desc: "Built for productivity. Build fast, stay consistent, and enjoy coding.", color: "text-danger" },
         { title: "🔌 Extendable", desc: "Add your own utilities, components, and design tokens effortlessly.", color: "text-accent" },
       ].map((item, index) => (
-        <div key={index} className="bg-black p-8 rounded-lg border-2 border-muted w-full max-w-[350px] mx-auto text-left transition-all transform hover:scale-105 hover:shadow-2xl hover:bg-opacity-80 hover:border-primary">
+        <div key={index} className="bg-black p-8 rounded-lg border border-primary w-full max-w-[350px] mx-auto text-left transition-all transform hover:scale-105 hover:shadow-2xl hover:bg-opacity-80 hover:border-primary">
           <h3 className={`text-3xl font-semibold mb-4 ${item.color}`}>{item.title}</h3>
           <p className="text-muted text-lg">{item.desc}</p>
         </div>
@@ -68,7 +66,8 @@ export default function Home() {
     </div>
   </div>
 </section>
-
+<Demo/>
+<Demo2/>
 
 
     </div>
