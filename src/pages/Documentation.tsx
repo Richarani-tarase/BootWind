@@ -8,7 +8,7 @@ export default function Documentation() {
       
         <Sidebar />
   
-      <main className="flex-1 p-8 overflow-y-auto">
+      <main className="flex-1 overflow-y-auto">
         <GettingStarted />
 
         <Utilities />

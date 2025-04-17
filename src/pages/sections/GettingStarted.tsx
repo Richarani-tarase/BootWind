@@ -1,6 +1,6 @@
 export default function GettingStarted() {
   return (
-    <div className="mx-auto px-6 py-10">
+    <div className="mx-auto px-6 sm:p-2 py-10">
       {/* Introduction */}
       <section id="introduction" className="mb-12 bg-gray-800 rounded-lg p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
         <h1 className="text-3xl font-bold text-teal-400 mb-6">Introduction</h1>
@@ -38,7 +38,7 @@ export default function GettingStarted() {
           Then import it in your main CSS or JS file:
         </p>
         <pre className="bg-gray-100 text-sm text-gray-800 p-4 rounded overflow-x-auto">
-          <code>{'@import "bootwind";'}</code>
+          <code>{'@import "bootwind-csss/Bootwind.css";'}</code>
         </pre>
       </section>
 

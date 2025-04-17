@@ -635,6 +635,13 @@
 /* =======================================
    📱 RESPONSIVE CLASSES
 ======================================= */
+@media (min-width: 320px) {
+  .ssm\:text-xs { font-size: 0.80rem; }
+  .ssm\:p-1 { padding: var(--spacing-1); }
+  .ssm\:flex-row { flex-direction: row; }
+  .ssm\:hidden { display: none; }
+  .ssm\:block { display: block; }
+}
 @media (min-width: 640px) {
   .sm\:text-sm { font-size: 0.875rem; }
   .sm\:p-2 { padding: var(--spacing-2); }

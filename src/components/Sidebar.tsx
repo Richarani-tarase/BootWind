@@ -117,7 +117,7 @@ export default function Sidebar() {
       <nav>
         {sections.map((section, index) => (
           <div key={index}>
-            <h2 className="text-2xl font-bold my-8 uppercase tracking-wider text-gray-300">
+            <h2 className="text-3xl font-bold my-8 uppercase tracking-wider text-gray-300">
               {section.title}
             </h2>
             <ul className="flex flex-col gap-4 pl-2 list-none">

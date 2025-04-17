@@ -17,7 +17,7 @@ const UtilitySection: React.FC<UtilitySectionProps> = ({
   return (
     <section
       id={id}
-      className="mb-8 bg-gray-900 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-all duration-300"
+      className="mb-8 bg-gray-900 rounded-lg p-6  shadow-lg hover:shadow-2xl transition-all duration-300"
     >
       <h3 className="text-xl font-semibold mb-4 text-primary">{title}</h3>
       <div className="">
