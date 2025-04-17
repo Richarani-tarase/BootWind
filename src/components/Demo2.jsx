@@ -2,16 +2,16 @@ import React from 'react'
 
 export default function Demo2() {
   return (
-    <div>
+    <div className='overflow-y-auto'>
       
-      <div className="bg-black text-muted py-16">
+      <div className="bg-black text-muted py-16 overflow-y-auto">
         <h1 className="text-center text-white text-5xl font-semibold mb-8">Responsive Design Examples</h1>
         <p className="text-center text-base mx-2 md:text-xl max-w-3xl mx-auto mb-12">
           Check out the responsiveness of our custom CSS classes. These utility classes help you build layouts that adapt to all screen sizes seamlessly.
         </p>
 
         {/* Responsive Grid Layout */}
-        <div className="grid mx-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid mx-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-y-auto">
           <div className="bg-dark p-6 rounded-lg shadow-md flex flex-col justify-between">
             <h3 className="text-2xl font-semibold mb-4 text-white">Responsive Grid</h3>
             <p className="text-lg">The grid layout changes based on screen width. On small screens, items stack vertically; on larger screens, they are displayed in multiple columns.</p>

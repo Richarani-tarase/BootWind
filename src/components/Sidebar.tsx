@@ -113,7 +113,7 @@ export default function Sidebar() {
   ];
 
   return (
-    <aside className="fixed w-100 overflow-y-auto p-6 bg-black text-white border-r border-gray-700 z-1">
+    <aside className="fixed w-100 overflow-y-auto p-6 bg-black text-white border-r border-gray-700 z-1 md:">
       <nav>
         {sections.map((section, index) => (
           <div key={index}>
