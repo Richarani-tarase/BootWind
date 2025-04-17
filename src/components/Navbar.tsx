@@ -31,16 +31,11 @@ const Navbar: React.FC = () => {
             Installation
           </a>
         </li>
-        <li>
-          <a href="#contact" className="hover:bg-secondary p-2 text-white no-underline rounded-md transition cursor-pointer">
-            Contact
-          </a>
-        </li>
       </ul>
 
       {/* Mobile Dropdown */}
       {isMenuOpen && (
-        <ul className="absolute list-none top-full left-0 w-screen bg-dark flex flex-col gap-2 p-4 md:hidden z-10">
+        <ul className="absolute list-none top-full left-0 w-screen bg-dark flex flex-col gap-2 p-4 md:hidden z-10 overflow-y-auto">
           <li>
             <Link to="/documentation" className="hover:bg-secondary text-white no-underline p-2 rounded-md transition cursor-pointer">
               Documentation
@@ -49,11 +44,6 @@ const Navbar: React.FC = () => {
           <li>
             <a href="#installation" className="hover:bg-secondary no-underline text-white p-2 rounded-md transition cursor-pointer">
               Installation
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="hover:bg-secondary no-underline p-2 rounded-md transition cursor-pointer">
-              Contact
             </a>
           </li>
         </ul>
